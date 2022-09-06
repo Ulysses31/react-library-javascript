@@ -1,10 +1,25 @@
-import React from 'react'
+import React from "react";
 
-import { ExampleComponent } from 'react-library'
-import 'react-library/dist/index.css'
+import { Figure, GetDate, GetTime } from "react-library";
+import "react-library/dist/index.css";
+
+const figureItems = {
+  image:
+    "https://tailwindcss.com/_next/static/media/sarah-dayan.a8ff3f1095a58085a82e3bb6aab12eb2.jpg",
+  descr: `“Tailwind CSS is the only framework that I've seen scale on large
+     FigureItems.teams. It’s easy to customize, adapts to any design, and the build
+     size is tiny.”`,
+  name: "Sarah Dayan",
+  jobdescr: "Software Engineer",
+  country: "Algolia",
+  email: "sarah-dayan@datacenter.com",
+};
 
 const App = () => {
-  return <ExampleComponent text="Create React Library Example 😄" />
-}
+  console.log(GetDate());
+  console.log(GetTime());
 
-export default App
+  return <Figure contents={figureItems} />;
+};
+
+export default App;
